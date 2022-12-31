@@ -1,0 +1,15 @@
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\bin\Debug\EntityLayer.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\bin\Debug\EntityLayer.pdb
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
