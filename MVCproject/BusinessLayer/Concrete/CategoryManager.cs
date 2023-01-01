@@ -25,20 +25,19 @@ namespace BusinessLayer.Concrete
         //Ekleme işlemi
         public void CategoryADDBl(Category p)
         {
+            repo.Insert(p);
             //Eğer bizim dışarıdan gönderdiğimiz paratmetre if bloğuna takılırsa hata mesajı gönderir.
             //Aksi durumda insert metodu çağırılsın ve p parametresi gelsin.
-            if (p.CategoryName== "" || p.CategoryName.Length <= 3 || p.CategoryDescription=="" || p.CategoryName.Length >= 51)
-            {
-                //Hata mesajı
-            }
-            else
-            {
-                //
-                repo.Insert(p);
-            }
+            //if (p.CategoryName== "" || p.CategoryName.Length <= 3 || p.CategoryDescription=="" || p.CategoryName.Length >= 51)
+            //{
+            //    Hata mesajı
+            //}
+            //else
+            //{
+            //    
+            //}
            
         }
 
-    
     }
 }

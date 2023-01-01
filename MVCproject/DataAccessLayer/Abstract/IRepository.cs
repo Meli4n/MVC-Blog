@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DataAccessLayer.Abstract
 {
     //Repository için oluşacak temel interface. 
-    //Dışarıdan gelicek olan entity i yani tabloyu göndermemiz gerekir 
+    //Dışarıdan gelicek olan entity i yani tabloyu göndermemiz gereklidir. 
     //IRepository<T> ye T değerini göderiyoruz çünkü burdaki T değeri bizim type mız oluyor ve bir entity i karşılıyor, hangi entity getirmek istiyorsak, sql den o entity i bu şekilde getirebiliriz.
     public interface IRepository<T>
     { 

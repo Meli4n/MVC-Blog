@@ -77,3 +77,16 @@ C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\obj\De
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\obj\Debug\MVCproject.csproj.CopyComplete
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\obj\Debug\MVCproject.dll
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\obj\Debug\MVCproject.pdb
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\BusinessLayer.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\DataAccessLayer.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\EntityFramework.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\EntityFramework.SqlServer.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\EntityLayer.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\BusinessLayer.pdb
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\BusinessLayer.dll.config
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\DataAccessLayer.pdb
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\DataAccessLayer.dll.config
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\EntityLayer.pdb
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\EntityLayer.dll.config
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\EntityFramework.xml
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\EntityFramework.SqlServer.xml

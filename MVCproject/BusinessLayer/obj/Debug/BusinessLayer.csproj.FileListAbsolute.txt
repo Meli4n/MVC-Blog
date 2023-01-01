@@ -13,3 +13,6 @@ C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\BusinessLayer\obj
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
