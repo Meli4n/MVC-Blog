@@ -23,8 +23,8 @@ namespace MVCproject.Controllers
         public ActionResult GetCategoryList() 
         {
             // categoryvalues değişikenimizin içerisine kategori tablodaki veriler gelicek.
-            var categoryvalues = cm.GetAllBl();
-            return View(categoryvalues);
+            //var categoryvalues = cm.GetAllBl();
+            return View();
         }
 
         //Sayfa yüklendikten sonra [HttpGet] çalışacak.
@@ -35,14 +35,14 @@ namespace MVCproject.Controllers
             //Sayfayı geri göndürür.
             return View();
         }
-
+        
         //Yeni kategori eklemek için kullanacağımız metod.
         //Kategori ekleme işleminde üzerinde çalıştığımız entitiden türetilmiş bir parametre göndermemiz gerekiyor.
         //Sayfada bir butona tıkladığımız zaman [HttpPost] çalışacak.
         [HttpPost]
         public ActionResult AddCategory(Category p) 
         {
-            cm.CategoryADDBl(p);
+            //cm.CategoryADDBl(p);
             //Ekleme işlemini gerçekleştikten sonra bizi tanımlamış olduğumuz GetCategoryList metoduna yönlendir.
             //RedirectToAction => Aksiyona doğru yönlendir.
             return RedirectToAction("GetCategoryList");

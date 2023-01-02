@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrete.Repositories;
+﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete.Repositories;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,36 +10,24 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class CategoryManager
+    //CategoryManager olarak interfacenin de tanımlı metodları kalıtsal yollarla çağırıyoruz..
+    public class CategoryManager : ICategoryService
     {
-        //CategoryManager içerisine öncelikle üzerinde çalışacağımız sınıfı çağırıyoruz. Yani Repositories sınıfına bağlı olarak çağırıyoruz.
-        //Küçüktür büyüktür sembolü içerisine bir T değeri göndermemiz gerekiyor. T değeri bir class olacak yani üzerinde çalışacağımız Entity olacak.
-        //Nesne türetiyoruz ve ismine (repo) diyoruz.
-        GenericRepository<Category> repo = new GenericRepository<Category>();
-    
-        //Daha sonra her bir (CRUD) işlemleri için metodlar tanımlıyoruz.
+        //ICategoryDal dan bir _categoryDal ismine bir field türet.
+        ICategoryDal _categoryDal;
+
+        //Constructor metodunu hazır getirmek için CategoryManager üzerine (ctrl + .) yaptıktan sonra (Generate constructor) seçiyoruz. Çıkan ekran ok diyerek constructor ı oluştutyoruz.
+        public CategoryManager(ICategoryDal categoryDal)
+        {
+            //_categoryDal a ICategoryDal dan başka categoryDal değerinin ataması gerçekleşmiş oldu. 
+            _categoryDal = categoryDal;
+        }
+
         //Listeleme işlemi
-        public List<Category> GetAllBl()
+        public List<Category> GetList()
         {
-            return repo.List();
+            return _categoryDal.List();
         }
-
-        //Ekleme işlemi
-        public void CategoryADDBl(Category p)
-        {
-            repo.Insert(p);
-            //Eğer bizim dışarıdan gönderdiğimiz paratmetre if bloğuna takılırsa hata mesajı gönderir.
-            //Aksi durumda insert metodu çağırılsın ve p parametresi gelsin.
-            //if (p.CategoryName== "" || p.CategoryName.Length <= 3 || p.CategoryDescription=="" || p.CategoryName.Length >= 51)
-            //{
-            //    Hata mesajı
-            //}
-            //else
-            //{
-            //    
-            //}
-           
-        }
-
     }
 }
+        
