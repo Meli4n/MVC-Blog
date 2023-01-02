@@ -4,3 +4,13 @@
 }
 
 <h1>Kategori Ekleme Sayfası</h1>
+@*Text in daha güzel gözükmesi için bootstrap ekliyoruz.*@
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+@*Form tag ı içerisinde yer alan değerler post olduğu zaman çalışsın.*@
+<form class="form-group" method="post">
+    <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" />
+    <br />
+    <input type="text" placeholder="Açıklama giriniz" name="CategoryDescription" class="form-control" />
+    <button class="btn btn-primary">Ekle</button>
+</form>

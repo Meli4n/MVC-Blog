@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public   class CategoryManager
+    public class CategoryManager
     {
         //CategoryManager içerisine öncelikle üzerinde çalışacağımız sınıfı çağırıyoruz. Yani Repositories sınıfına bağlı olarak çağırıyoruz.
         //Küçüktür büyüktür sembolü içerisine bir T değeri göndermemiz gerekiyor. T değeri bir class olacak yani üzerinde çalışacağımız Entity olacak.
