@@ -1,4 +1,6 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -12,7 +14,7 @@ namespace MVCproject.Controllers
     {
         // GET: Category
         //BusinessLayer da bulunan CategoryManager sınıfımızı çağırıyoruz
-        CategoryManager cm = new CategoryManager();
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());
 
         public ActionResult Index()
         {
@@ -23,8 +25,9 @@ namespace MVCproject.Controllers
         public ActionResult GetCategoryList() 
         {
             // categoryvalues değişikenimizin içerisine kategori tablodaki veriler gelicek.
-            //var categoryvalues = cm.GetAllBl();
-            return View();
+            //CategoryManager dan GetList çağırıyoruz.
+            var categoryvalues = cm.GetList();
+            return View(categoryvalues);
         }
 
         //Sayfa yüklendikten sonra [HttpGet] çalışacak.
