@@ -23,11 +23,18 @@ namespace BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
+        public void CategoryAdd(Category category)
+        {   //Ekleme işlemi için insert kullanıyoruz.
+            _categoryDal.Insert(category);
+        }
+
         //Listeleme işlemi
         public List<Category> GetList()
         {
             return _categoryDal.List();
         }
+
+
     }
 }
         

@@ -12,5 +12,9 @@ namespace BusinessLayer.Abstract
         //List içerisinde kategoriyi getiriyoruz.
         //İsmine GetList koyuyoruz.
         List<Category> GetList();
+
+        //Kategori ekleme metodunu tanımlıyoruz.
+        //Kategoriden bir kategori parametresi alıcak.
+        void CategoryAdd(Category category);
     }
 }

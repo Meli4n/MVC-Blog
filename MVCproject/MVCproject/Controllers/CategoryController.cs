@@ -1,9 +1,11 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -34,7 +36,7 @@ namespace MVCproject.Controllers
         //Aynı isimli ActionResult ın üzerinde çalışacak.
         [HttpGet]
         public ActionResult AddCategory()
-        {
+        { 
             //Sayfayı geri göndürür.
             return View();
         }
@@ -46,6 +48,14 @@ namespace MVCproject.Controllers
         public ActionResult AddCategory(Category p) 
         {
             //cm.CategoryADDBl(p);
+
+
+            //CategoryValidator category'in kurallarını tutuyor.
+            //CategoryValidator dan bir nesne türetiyoruz.
+            CategoryValidator categoryValidator= new CategoryValidator();
+
+            
+
             //Ekleme işlemini gerçekleştikten sonra bizi tanımlamış olduğumuz GetCategoryList metoduna yönlendir.
             //RedirectToAction => Aksiyona doğru yönlendir.
             return RedirectToAction("GetCategoryList");
