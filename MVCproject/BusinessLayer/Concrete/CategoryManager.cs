@@ -23,7 +23,7 @@ namespace BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
-        public void CategoryAdd(Category category)
+        public void CategoryAddBL(Category category)
         {   //Ekleme işlemi için insert kullanıyoruz.
             _categoryDal.Insert(category);
         }
