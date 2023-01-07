@@ -15,6 +15,6 @@ namespace BusinessLayer.Abstract
 
         //Kategori ekleme metodunu tanımlıyoruz.
         //Kategoriden bir kategori parametresi alıcak.
-        void CategoryAdd(Category category);
+        void CategoryAddBL(Category category);
     }
 }

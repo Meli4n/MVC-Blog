@@ -90,3 +90,9 @@ C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\En
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\EntityLayer.dll.config
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\EntityFramework.xml
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\EntityFramework.SqlServer.xml
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\FluentValidation.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\FluentValidation.xml
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\MVCproject\bin\System.Threading.Tasks.Extensions.xml

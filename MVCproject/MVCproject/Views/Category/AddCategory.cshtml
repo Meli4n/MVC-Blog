@@ -1,4 +1,4 @@
-﻿
+﻿@model EntityLayer.Concrete.Category
 @{
     Layout = null;
 }
@@ -7,10 +7,21 @@
 @*Text in daha güzel gözükmesi için bootstrap ekliyoruz.*@
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 
-@*Form tag ı içerisinde yer alan değerler post olduğu zaman çalışsın.*@
-<form class="form-group" method="post">
-    <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" />
-    <br />
-    <input type="text" placeholder="Açıklama giriniz" name="CategoryDescription" class="form-control" />
-    <button class="btn btn-primary">Ekle</button>
-</form>
+@*Öncelikle başlangıç oluşturuyoruz*@
+@*BeginForm() = Eklemeler, güncellemeler işlemlerinde kullanılan html yardımcısıdır. Üç tane parametresi vardır. Birinci parametre üzerinde çalıştığımız ActionResult ismi, ikinci parametre üzerinde çalıştığımız Controller ismi, üçüncü parametre FormMethod'un değeri yani post ya da get işlemi*@
+
+@using (Html.BeginForm("AddCategory","Category",FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Kategori Adı")
+        @Html.TextBoxFor(x => x.CategoryName)
+        @Html.ValidationMessageFor(x => x.CategoryName)
+        <br /> <br />
+        @Html.Label("Açıklama yazınız")
+        @Html.TextBoxFor(x => x.CategoryDescription)
+        @Html.ValidationMessageFor(x => x.CategoryDescription)
+        <br /> <br />
+        <button>Kaydet</button>
+    </div>
+}
+
