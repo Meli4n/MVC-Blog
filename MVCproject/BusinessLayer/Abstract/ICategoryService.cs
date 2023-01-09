@@ -16,5 +16,12 @@ namespace BusinessLayer.Abstract
         //Kategori ekleme metodunu tanımlıyoruz.
         //Kategoriden bir kategori parametresi alıcak.
         void CategoryAddBL(Category category);
+
+        //Silme işlemi için ID ye göre getirme işlemi
+        //GetByID id ye göre değişken alıcak.
+        Category GetByID(int id);   
+
+        //Silme işlemi yazmamız gereken metod.
+        void CategoryDelete(Category category);
     }
 }

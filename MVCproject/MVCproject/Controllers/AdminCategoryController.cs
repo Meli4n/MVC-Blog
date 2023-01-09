@@ -71,6 +71,16 @@ namespace MVCproject.Controllers
             return View();
 
         }
-    }
+
+        //Kategori silme işlemi için yazdığımız metod
+        //Dışarıdan bir id parametresi alıcak.
+        public ActionResult DeleteCategory(int id) 
+        {
+            //GetByID id'ye göre getirmemize yarıyorç
+            var CategoryValue = cm.GetByID(id);
+            //CategoryManager deki CategoryDelete arantez içerine CategoryValue dan gelen değer silecek.
+            cm.CategoryDelete(CategoryValue);
+            return RedirectToAction("Index");
+        }
     }
 }

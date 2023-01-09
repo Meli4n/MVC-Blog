@@ -18,6 +18,9 @@ namespace DataAccessLayer.Abstract
         //Eklemek için T den parametre alıyoruz.
         void Insert (T p);
 
+        //Get isminde metod tanımlıyoruz
+        T Get(Expression<Func<T, bool>> filter);
+
         //Silmek için T den parametre alıyoruz.
         void Delete (T p);
 

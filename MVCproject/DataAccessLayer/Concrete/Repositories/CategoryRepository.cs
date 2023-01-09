@@ -27,6 +27,11 @@ namespace DataAccessLayer.Concrete.Repositories
             c.SaveChanges();
         }
 
+        public Category Get(Expression<Func<Category, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Insert(Category p)
         {
             //Ekleme işleminde parametreden gelen değeri _object içerisinde bulunan sınıfa ekler.

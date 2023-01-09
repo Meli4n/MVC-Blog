@@ -23,11 +23,11 @@
         <tr>
             <td>@item.CategoryID</td>
             <td>@item.CategoryName</td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
+            @*AdminCategory içerisinde yer alan DeleteCategory gidiceksin. Giderken bir de id götüreceksin.*@
+            <td><a href="/AdminCategory/DeleteCategory/@item.CategoryID" class="btn btn-danger">Sil</a></td>
             <td><a href="#" class="btn btn-warning">Güncelle</a></td>
             <td><a href="#" class="btn btn-primary">Başlıklar</a></td>
         </tr>
     }
 </table>
-<br />
 <a href="/AdminCategory/AddCategory" class="btn btn-info">Yeni Kategori</a>

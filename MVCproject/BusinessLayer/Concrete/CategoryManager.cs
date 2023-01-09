@@ -28,6 +28,19 @@ namespace BusinessLayer.Concrete
             _categoryDal.Insert(category);
         }
 
+        //Silme işlemi için yazılan metod.
+        public void CategoryDelete(Category category)
+        {
+            _categoryDal.Delete(category);
+        }
+
+        public Category GetByID(int id)
+        {
+            //_categoryDal sınıfı GenericRepository deki değerleri alıyor.
+            //x öyleki CategoryID id'den gelen değere eşit olmalı.
+            return _categoryDal.Get(x => x.CategoryID== id);
+        }
+
         //Listeleme işlemi
         public List<Category> GetList()
         {
