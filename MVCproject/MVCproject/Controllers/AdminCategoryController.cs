@@ -82,5 +82,15 @@ namespace MVCproject.Controllers
             cm.CategoryDelete(CategoryValue);
             return RedirectToAction("Index");
         }
+
+        //Sayfa yüklrndiği zaman çalışacak.[HttpGet]
+        [HttpGet]
+        //Updata işlemi için iki adım var. Birincisi güncellenecek bilgilerin güncelleme sayfasına taşınması. İkincisi güncelleme işleminin yapılması.
+        public ActionResult EditCategory(int id)
+        {
+            //ID değişkeninden parametreden değerine göre ilgili satırın kayıtlarını CategoryValue isimli değişkene atadık.
+            var CategoryValue = cm.GetByID(id);
+            return View(CategoryValue);
+        }
     }
 }

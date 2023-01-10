@@ -77,7 +77,6 @@ namespace MVCproject.Controllers
                 }
             }
             return View();
-            
         }
     }
 }

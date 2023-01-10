@@ -23,5 +23,8 @@ namespace BusinessLayer.Abstract
 
         //Silme işlemi yazmamız gereken metod.
         void CategoryDelete(Category category);
+
+        //Güncelleme işlemi için yazdığımız metod.
+        void CategoryUpdate(Category category);
     }
 }
