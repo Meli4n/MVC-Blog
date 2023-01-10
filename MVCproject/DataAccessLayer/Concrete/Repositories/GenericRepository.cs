@@ -47,7 +47,11 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Insert(T p)
         {
-            _object.Add(p);
+            //Eklenecek olan entity, context ten türemiş olduğumuz c nesnesi Entry metodunun içerisine eklenecek olan parametreyi yazıyoruz o da p den gelen değer olacak.
+            var addedEntity = c.Entry(p);
+            //Tanımlamış olduğumuz addedEntity yanına nokta koyup State yazarak durum belirtmiş oluyoruz.
+            addedEntity.State = EntityState.Added;
+            //_object.Add(p); kullanmamıza gerek kalmıyor.
             c.SaveChanges();
         }
 
@@ -65,6 +69,11 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Update(T p)
         {
+            //Eklenecek olan entity, context ten türemiş olduğumuz c nesnesi Entry metodunun içerisine eklenecek olan parametreyi yazıyoruz o da p den gelen değer olacak.
+            var updatedEntity = c.Entry(p);
+            //Tanımlamış olduğumuz addedEntity yanına nokta koyup State yazarak durum belirtmiş oluyoruz.Modified(Biçimlendirme,Düzenleme)
+            updatedEntity.State = EntityState.Modified;
+            //_object.Add(p); kullanmamıza gerek kalmıyor.
             c.SaveChanges();
         }
     }

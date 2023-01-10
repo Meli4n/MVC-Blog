@@ -84,13 +84,24 @@ namespace MVCproject.Controllers
         }
 
         //Sayfa yüklrndiği zaman çalışacak.[HttpGet]
-        [HttpGet]
         //Updata işlemi için iki adım var. Birincisi güncellenecek bilgilerin güncelleme sayfasına taşınması. İkincisi güncelleme işleminin yapılması.
+        [HttpGet]
         public ActionResult EditCategory(int id)
         {
             //ID değişkeninden parametreden değerine göre ilgili satırın kayıtlarını CategoryValue isimli değişkene atadık.
             var CategoryValue = cm.GetByID(id);
             return View(CategoryValue);
+        }
+
+        //Category sınfından p parametresi.
+        //Siteyle etkileşime geçince post metodu çalışır.
+        //Category sınıfında p parametresi türetiyoruz.
+        [HttpPost]
+        public ActionResult EditCategory(Category p)
+        {
+            //p den gelen değeri güncelliyoruz.
+            cm.CategoryUpdate(p);
+            return RedirectToAction("Index");
         }
     }
 }
