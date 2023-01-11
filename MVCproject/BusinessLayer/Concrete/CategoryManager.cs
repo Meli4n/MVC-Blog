@@ -23,8 +23,9 @@ namespace BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
+        //Ekleme işlemi için insert kullanıyoruz.
         public void CategoryAddBL(Category category)
-        {   //Ekleme işlemi için insert kullanıyoruz.
+        {
             _categoryDal.Insert(category);
         }
 
@@ -47,7 +48,7 @@ namespace BusinessLayer.Concrete
             return _categoryDal.Get(x => x.CategoryID== id);
         }
 
-        //Listeleme işlemi
+        //Listeleme işlemii.
         public List<Category> GetList()
         {
             return _categoryDal.List();

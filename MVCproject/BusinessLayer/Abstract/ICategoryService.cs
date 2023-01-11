@@ -9,22 +9,22 @@ namespace BusinessLayer.Abstract
 {
     public interface ICategoryService
     {
-        //List içerisinde kategoriyi getiriyoruz.
+        //Kategorileri listelememizi sağlar.
         //İsmine GetList koyuyoruz.
         List<Category> GetList();
 
-        //Kategori ekleme metodunu tanımlıyoruz.
+        //Kategori ekleme yapmamızı sağlar.
         //Kategoriden bir kategori parametresi alıcak.
         void CategoryAddBL(Category category);
 
-        //Silme işlemi için ID ye göre getirme işlemi
+        //Silme işlemi ID e göre yapmamızı sağlar.
         //GetByID id ye göre değişken alıcak.
         Category GetByID(int id);   
 
-        //Silme işlemi yazmamız gereken metod.
+        //Silme işlemi yapmamızı sağlar.
         void CategoryDelete(Category category);
 
-        //Güncelleme işlemi için yazdığımız metod.
+        //Güncelleme işlemi yapmamızı sağlar.
         void CategoryUpdate(Category category);
     }
 }
