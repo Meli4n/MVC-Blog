@@ -24,7 +24,6 @@ namespace EntityLayer.Concrete
         //İlgili sınıftan değer alarak ve Category türünde bir property tanımlayarak
         //İlişki alanındaki CategoryID ile HeadingID eşitlenecek.
         //Burada CategoryID ile HeadingID alasında tam anlamıyla ilişki kuruluyor
-        //Heading tablosunda heading türünden bir property tanımlamış olduk 
         public virtual Category Category { get; set; }
 
         //Content ve Heading tablosu arasında ilişki kuruluyor.
@@ -34,7 +33,6 @@ namespace EntityLayer.Concrete
 
         //Başlığı açan kişinin Id sini görebilmek için aşağıdakileri yapıyoruz
         //Temel sınıftan türetilmiş sınıflara aktarılan metotları her zaman olduğu gibi kullanmak istemeyebiliriz. Bu metotları türetilmiş sınıfın içerisinden yeniden tanımlayabilmek için virtual ve override anahtar sözcüklerini kullanırız. Virtual metotlar Inheritance(Kalıtım) yoluyla aktarıldıkları sınıfların içerisinden override edilerek değiştirilebilirler.Eğer override edilmezlerse temel sınıf içerisinde tanımladıkları şekilde çalışırlar.virtual anahlarını atadığımız metot sanal olur ve aynı isimde farklı bir metot tarafından override edilebilir.
-        //  
         public int WriterID { get; set; }
         public virtual Writer Writer { get; set; }
     }

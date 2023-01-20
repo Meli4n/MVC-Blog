@@ -16,6 +16,9 @@ namespace MVCproject.Controllers
         //Admin sayfasındaki kategori bölümüne sql tablolarını getirme işlemi için AdminCategoryController gitmeliyiz.
         //
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
+        //CategoryValidator category'in kurallarını tutuyor.
+        //CategoryValidator dan bir nesne türetiyoruz.
+        CategoryValidator categoryValidator = new CategoryValidator();
 
         public ActionResult Index()
         {
@@ -39,13 +42,6 @@ namespace MVCproject.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category p)
         {
-            //cm.CategoryADDBl(p);
-
-
-            //CategoryValidator category'in kurallarını tutuyor.
-            //CategoryValidator dan bir nesne türetiyoruz.
-            CategoryValidator categoryValidator = new CategoryValidator();
-
             //Validate() geçerliliği kontrol eder.
             //results isminde bir ValidationResult değişkeni oluşturduk.
             //results CategoryValidator dan değerlerle kontrolünü(Validate) yapıyoruz.
@@ -74,11 +70,11 @@ namespace MVCproject.Controllers
 
         //Kategori silme işlemi için yazdığımız metod
         //Dışarıdan bir id parametresi alıcak.
-        public ActionResult DeleteCategory(int id) 
+        public ActionResult DeleteCategory(int id)
         {
             //GetByID id'ye göre getirmemize yarıyorç
             var CategoryValue = cm.GetByID(id);
-            //CategoryManager deki CategoryDelete arantez içerine CategoryValue dan gelen değer silecek.
+            //CategoryManager deki CategoryDelete parantez içerine CategoryValue dan gelen değer silecek.
             cm.CategoryDelete(CategoryValue);
             return RedirectToAction("Index");
         }
@@ -88,20 +84,40 @@ namespace MVCproject.Controllers
         [HttpGet]
         public ActionResult EditCategory(int id)
         {
-            //ID değişkeninden parametreden değerine göre ilgili satırın kayıtlarını CategoryValue isimli değişkene atadık.
+            //id değişkeninden parametreden değerine göre ilgili satırın kayıtlarını CategoryValue isimli değişkene atadık.
             var CategoryValue = cm.GetByID(id);
             return View(CategoryValue);
         }
 
         //Category sınfından p parametresi.
-        //Siteyle etkileşime geçince post metodu çalışır.
         //Category sınıfında p parametresi türetiyoruz.
+        //Siteyle etkileşime geçince post metodu çalışır.
         [HttpPost]
         public ActionResult EditCategory(Category p)
         {
-            //p den gelen değeri güncelliyoruz.
-            cm.CategoryUpdate(p);
-            return RedirectToAction("Index");
+            //Validate() geçerliliği kontrol eder.
+            //results isminde bir ValidationResult değişkeni oluşturduk.
+            //results CategoryValidator dan değerlerle kontrolünü(Validate) yapıyoruz.
+            ValidationResult results = categoryValidator.Validate(p);
+
+            if (results.IsValid)
+            {
+                //p den gelen değeri güncelliyoruz.
+                cm.CategoryUpdate(p);
+                //Ekleme işlemini gerçekleştikten sonra bizi tanımlamış olduğumuz GetCategoryList metoduna yönlendir.
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                //Hata mesajlarını tutacağımız diziyi oluşturuyoruz.
+                //results dan gelen Errors lardan bir döngü oluşturucak
+                foreach (var item in results.Errors)
+                {
+                    //Modelin durumuna hataları ekle(önce ilgili property nin ismi), (hatanın kendisi)
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
     }
 }

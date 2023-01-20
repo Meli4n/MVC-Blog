@@ -17,7 +17,7 @@ namespace EntityLayer.Concrete
 
         public DateTime ContentDate { get; set; }
 
-        //Oluşturacağımız ilişkili tablonun anahtar sütunuyla aynısını veriyoruz CategoryID
+        //Oluşturacağımız ilişkili tablonun anahtar sütunuyla aynısını veriyoruz.
         //Hangi Başığı getireceksek onun ID si yazılır.
         public int HeadingID { get; set; }
 

@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 namespace EntityLayer.Concrete
 {
     public class About
-    {   //Key karakter sınırlandırmaya yarar
+    {   
         [Key]
         public int AboutID { get; set; }
-        //AboutDetails1 maksimum uzunluğunu [StringLength()] şeklinde belirliyoruz.
         [StringLength(1000)]
         public string AboutDetails1 { get; set; }
 

@@ -1,20 +1,14 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
-using DataAccessLayer.Abstract;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MVCproject.Controllers
 {
     public class CategoryController : Controller
     {
-        // GET: Category
         //BusinessLayer da bulunan CategoryManager sınıfımızı çağırıyoruz
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
 
@@ -72,7 +66,7 @@ namespace MVCproject.Controllers
                 //results dan gelen Errors lardan bir döngü oluşturucak
                 foreach (var item in results.Errors)
                 {
-                    //Modelin durumuna hataları ekle(önce ilgili property nin ismi), (hatanın kendisi)
+                    //Modelin durumuna hataları ekle(property nin ismi), (hatanın kendisi)
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
             }

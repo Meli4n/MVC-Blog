@@ -12,10 +12,10 @@ using System.Xml.Linq;
 namespace DataAccessLayer.Concrete.Repositories
 {
     //Bütün bileşenlerin tamamını kapsar.
-    //GenericRepository<T> => T değer alacak.
+    //GenericRepository<T> => T değerinde bir entity alacak.
     //Interface olarak değerleri IRepository den alıcak ve o da IRepository<T> => T değer alıcak.
     //where şartını belirliyoruz ve yanına (T : Class) => "T değeri bir class olmalıdır" yazıyoruz. 
-    //T değeri zaten entity olarak gönderiyoruz.
+    //T değeri entity olarak gönderiyoruz.
 
     public class GenericRepository<T> : IRepository<T> where T : class
     {
@@ -27,12 +27,13 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public GenericRepository()
         {
-            //Peki bunu nasıl yapacağız, (ctor) (constructor) dır, iki kere tab tuşuna bastıktan sonra oluşturduğumuz sınıfın ismiyle aynı isimde bir metod oluştu, bu metodların türü constructor metotdu denir.
-            //Bu metodun içerisine değer ataması yapıyoruz. Tanımladığımız _object değer ataması yapıyoruz. _object değeri context e bağlı olarak gönderilern T değeri olucak.
+            //P(ctor) (constructor) dır, iki kere tab tuşuna bastıktan sonra oluşturduğumuz sınıfın ismiyle aynı isimde bir metod oluştu, bu metodların türü constructor metotdu denir.
+            //Bu metodun içerisine değer ataması yapıyoruz. Tanımladığımız _object değer atamasını yapıyoruz. _object değeri context e bağlı olarak gönderilern T değeri olucak.
             //Artık _object isimli field ım dışarıdan gönderdiğimiz entity neyse o olucak.
              _object = c.Set<T>();
         }
 
+        //Silme işlemi.
         public void Delete(T p)
         {
             _object.Remove(p);
@@ -51,10 +52,10 @@ namespace DataAccessLayer.Concrete.Repositories
             var addedEntity = c.Entry(p);
             //Tanımlamış olduğumuz addedEntity yanına nokta koyup State yazarak durum belirtmiş oluyoruz.
             addedEntity.State = EntityState.Added;
-            //_object.Add(p); kullanmamıza gerek kalmıyor.
             c.SaveChanges();
         }
 
+        //Listeleme işlemi.
         public List<T> List()
         {
            return _object.ToList(); 
@@ -73,7 +74,6 @@ namespace DataAccessLayer.Concrete.Repositories
             var updatedEntity = c.Entry(p);
             //Tanımlamış olduğumuz addedEntity yanına nokta koyup State yazarak durum belirtmiş oluyoruz.Modified(Biçimlendirme,Düzenleme)
             updatedEntity.State = EntityState.Modified;
-            //_object.Add(p); kullanmamıza gerek kalmıyor.
             c.SaveChanges();
         }
     }
