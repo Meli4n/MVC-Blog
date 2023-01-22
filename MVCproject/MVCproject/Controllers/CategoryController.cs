@@ -41,9 +41,6 @@ namespace MVCproject.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category p)
         {
-            //cm.CategoryADDBl(p);
-
-
             //CategoryValidator category'in kurallarını tutuyor.
             //CategoryValidator dan bir nesne türetiyoruz.
             CategoryValidator categoryValidator = new CategoryValidator();

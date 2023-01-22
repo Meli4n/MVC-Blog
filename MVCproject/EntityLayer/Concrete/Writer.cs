@@ -18,7 +18,7 @@ namespace EntityLayer.Concrete
         [StringLength(50)]
         public string WriterSurName { get; set; }
 
-        [StringLength(100)]
+        [StringLength(250)]
         public string WriterImage { get; set; }
         
         [StringLength(100)]
@@ -33,6 +33,8 @@ namespace EntityLayer.Concrete
         [StringLength(50)]
         public string WriterTitle{ get; set; }
 
+        public bool WriterStatus { get; set; }
+
         //Writer ve Heading tablosu arasında ilişki kuruluyor.
         //Hangi sınıfla ilişkili olunacaksa ICollection<> içeisine o sınıf yazılır.
         //ICollection = koleksiyon
@@ -45,4 +47,3 @@ namespace EntityLayer.Concrete
         public ICollection<Content> Contents { get; set; }
     }
 }
- 

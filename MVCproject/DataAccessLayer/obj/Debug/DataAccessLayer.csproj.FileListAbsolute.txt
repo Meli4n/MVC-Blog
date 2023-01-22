@@ -16,3 +16,5 @@ C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\o
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_edit.resources
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_title_add.resources
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mg_image_size_change.resources
+C:\Users\ufukc\OneDrive\Belgeler\Visual Studio 2022\MVCproject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mg_addstatus.resources

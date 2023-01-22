@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    //CategoryManager olarak interfacenin de tanımlı metodları kalıtsal yollarla çağırıyoruz..
+    //CategoryManager interfacenin de tanımlı metodları kalıtsal yollarla çağırıyoruz..
     public class CategoryManager : ICategoryService
     {
         //ICategoryDal dan bir _categoryDal ismine bir field türet.

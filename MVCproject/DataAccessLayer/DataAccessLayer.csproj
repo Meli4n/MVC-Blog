@@ -76,6 +76,14 @@
     <Compile Include="Migrations\202301201731141_mig_writer_title_add.designer.cs">
       <DependentUpon>202301201731141_mig_writer_title_add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301221646211_mg_image_size_change.cs" />
+    <Compile Include="Migrations\202301221646211_mg_image_size_change.designer.cs">
+      <DependentUpon>202301221646211_mg_image_size_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301221813014_mg_addstatus.cs" />
+    <Compile Include="Migrations\202301221813014_mg_addstatus.designer.cs">
+      <DependentUpon>202301221813014_mg_addstatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -95,6 +103,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301201731141_mig_writer_title_add.resx">
       <DependentUpon>202301201731141_mig_writer_title_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301221646211_mg_image_size_change.resx">
+      <DependentUpon>202301221646211_mg_image_size_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301221813014_mg_addstatus.resx">
+      <DependentUpon>202301221813014_mg_addstatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
