@@ -10,7 +10,6 @@ namespace BusinessLayer.Abstract
     public interface ICategoryService
     {
         //Kategorileri listelememizi sağlar.
-        //İsmine GetList koyuyoruz.
         List<Category> GetList();
 
         //Kategori ekleme yapmamızı sağlar.

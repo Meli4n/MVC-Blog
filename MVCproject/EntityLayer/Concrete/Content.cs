@@ -17,9 +17,13 @@ namespace EntityLayer.Concrete
 
         public DateTime ContentDate { get; set; }
 
+        public bool ContentStatus { get; set; }
+
         //Oluşturacağımız ilişkili tablonun anahtar sütunuyla aynısını veriyoruz.
         //Hangi Başığı getireceksek onun ID si yazılır.
-        public int HeadingID { get; set; }
+        public int HeadingID { get; set; }  
+
+        public bool HeadingStatus { get; set; }
 
         //İlgili sınıftan değer alarak ve Category türünde bir property tanımlanıyor.
         //İlişki alanındaki CategoryID ile HeadingID eşitlenecek.

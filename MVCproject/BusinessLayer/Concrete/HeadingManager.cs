@@ -43,7 +43,8 @@ namespace BusinessLayer.Concrete
         //Silme işlemi için yazılan metod.
         public void HeadingDelete(Heading heading)
         {
-             _headingdal.Delete(heading);
+            heading.HeadingStatus=false;
+            _headingdal.Update(heading);
         }
 
         //Güncelleme işlemi için metodu dolduruyoruz.

@@ -26,6 +26,8 @@ namespace EntityLayer.Concrete
         //Burada CategoryID ile HeadingID alasında tam anlamıyla ilişki kuruluyor
         public virtual Category Category { get; set; }
 
+        public bool HeadingStatus { get; set; }
+
         //Content ve Heading tablosu arasında ilişki kuruluyor.
         //Hangi sınıfla ilişkili olunacaksa ICollection<> içeisine o sınıf yazılır.
         //ICollection = koleksiyon

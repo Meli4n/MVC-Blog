@@ -18,7 +18,7 @@ namespace MVCproject.Controllers
 
         public ActionResult Index()
         {
-            var headingvalues = hm.GetList();   
+            var headingvalues = hm.GetList();
             return View(headingvalues);
         }
 
@@ -32,9 +32,33 @@ namespace MVCproject.Controllers
         public ActionResult AddHeading(Heading p)
         {
             //Bugünün kısa tarihini getirir.
-            p.HeadingDate= DateTime.Parse(DateTime.Now.ToShortDateString());
+            p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult EditHeading(int id)
+        {
+            //Güncellenecek olan değeri çağırıyoruz.
+            var headingvalue = hm.GetByID(id);
+            return View(headingvalue);
+        }
+
+        [HttpPost]
+        public ActionResult EditHeading(Heading p)
+        {
+            hm.HeadingUpdate(p);
+            return RedirectToAction("Index");
+        }
+        
+        public ActionResult DeleteHeading(int id)
+        {
+            //ID ye göre bul.
+            var headingvalue = hm.GetByID(id);
+            hm.HeadingDelete(headingvalue); 
+            return RedirectToAction("Index");   
+        }
+    
     }
 }
