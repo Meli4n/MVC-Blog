@@ -56,6 +56,7 @@ namespace MVCproject.Controllers
         {
             //ID ye göre bul.
             var headingvalue = hm.GetByID(id);
+            headingvalue.HeadingStatus = false; 
             hm.HeadingDelete(headingvalue); 
             return RedirectToAction("Index");   
         }
