@@ -13,6 +13,9 @@ namespace BusinessLayer.Abstract
         //İsmine GetList koyuyoruz.
         List<Heading> GetList();
 
+        //Yazara göre listeyi getirecek.
+        List<Heading> GetListByWriter();
+
         //Başlık ekleme yapmamızı sağlar.
         //Başlıktan bir başlık parametresi alıcak.
         void HeadingAdd(Heading heading);

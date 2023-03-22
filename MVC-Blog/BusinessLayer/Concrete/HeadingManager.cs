@@ -34,6 +34,11 @@ namespace BusinessLayer.Concrete
             return _headingdal.List();
         }
 
+        public List<Heading> GetListByWriter()
+        {
+            return _headingdal.List(x => x.WriterID == 4);
+        }
+
         //Ekleme işlemi için insert kullanıyoruz.
         public void HeadingAdd(Heading heading)
         {

@@ -21,7 +21,7 @@ namespace MVCproject.Controllers
         CategoryValidator categoryValidator = new CategoryValidator();
 
 
-        [Authorize] // Eğer kullanıcı sisteme giriş yapmadığı sürece category kısmını göremicek.
+        [Authorize(Roles = "B")] // Eğer kullanıcı sisteme giriş yapmadığı sürece bu kısmını göremicek.
         public ActionResult Index()
         {
             //Listeleme işlemi
